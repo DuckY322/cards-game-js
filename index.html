@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/anims.css" />
+    <script defer src="src/index.js"></script>
+  </head>
+  <body>
+    <section class="section-menu">
+      <div class="flex-row container section-menu__container">
+        <div class="flex-row section-menu__menu">
+          <h2 class="section-title">Начало игры</h2>
+          <ul class="section-menu__list">
+            <!-- <li class="flex-row section-menu__item">
+              <input
+                class="section-menu__input"
+                type="text"
+                id="input-nickName"
+                placeholder="Никнейм"
+              />
+              <label class="section-menu__label" for="input-nickName"
+                >Введите пожалуйста имя</label
+              >
+            </li> -->
+            <li class="flex-row section-menu__item">
+              <input
+                class="section-menu__input"
+                type="text"
+                id="input-cardCountVert"
+                placeholder="Количество карточек"
+              />
+              <label class="section-menu__label" for="input-cardCountVert"
+                >Введите количество карточек по вертикали, от 2 до 10
+                (четное)</label
+              >
+            </li>
+            <li class="flex-row section-menu__item">
+              <input
+                class="section-menu__input"
+                type="text"
+                id="input-cardCountHor"
+                placeholder="Количество карточек"
+              />
+              <label class="section-menu__label" for="input-cardCountHor"
+                >Введите количество карточек по горизонтали, от 2 до 10
+                (четное)</label
+              >
+            </li>
+          </ul>
+          <button class="btn section-menu__btn">Начать игру</button>
+        </div>
+      </div>
+    </section>
+    <section class="section-game off">
+      <div class="container flex-row section-game__container">
+        <h2 class="section-title section-game__title"></h2>
+        <span class="section-game__time"></span>
+        <span class="section-game__cards-left"></span>
+        <div class="flex-row section-game__card-field"></div>
+      </div>
+    </section>
+    <section class="section-gameover off">
+      <div class="container flex-row section-game__container">
+        <h2 class="section-title section-game__title section-gameover__title">
+          Игра окончена
+        </h2>
+        <span class="section-game__time section-gameover__time"></span>
+        <span
+          class="section-game__cards-left section-gameover__cards-left"
+        ></span>
+        <button class="btn section-gameover__button">Сыграть еще</button>
+      </div>
+    </section>
+  </body>
+</html>

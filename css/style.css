@@ -1,0 +1,310 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff");
+  font-display: swap;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-display: swap;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-ExtraBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  font-display: swap;
+  font-weight: 800;
+  font-style: normal;
+}
+
+/*Global css*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 121%;
+  font-weight: 400;
+  color: var(--color-3);
+}
+
+*:active,
+*:hover,
+*:focus,
+*:active,
+*:hover,
+*:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--anim-time) var(--anim-timing-function);
+}
+
+a:hover {
+  color: var(--color-orange);
+}
+
+a:active {
+  color: var(--color-dark-orange);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+textarea,
+input {
+  padding: 0 24px;
+  border: none;
+  border-radius: var(--border-radius);
+  background: var(--color-EC);
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 200%;
+  font-family: "Montserrat", sans-serif;
+}
+
+input::-webkit-search-cancel-button {
+  display: none;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+textarea::-webkit-input-placeholder,
+input::-webkit-input-placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 200%;
+  color: var(--color-CA);
+}
+
+video {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-EC);
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --color-F: #fff;
+  --color-0: #000;
+  --color-2: #222;
+  --color-3: #333;
+  --color-41: #414141;
+  --color-6: #666;
+  --color-E5: #e5e5e5;
+  --color-EC: #ececec;
+  --color-CA: #cacaca;
+  --color-D2: #d2d2d2;
+  --color-light-orange: #ffc266;
+  --color-orange: #ff9900;
+  --color-dark-orange: #e1670e;
+  --margin-container: 100px;
+  --border-radius: 15px;
+  --anim-time: 0.25s;
+  --anim-timing-function: ease-in-out;
+}
+
+.container {
+  padding: 0 12px;
+  margin: 0 auto var(--margin-container) auto;
+  max-width: 1794px;
+  overflow: hidden;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: cover;
+}
+
+.btn {
+  padding: 12px 24px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-F);
+  background-color: var(--color-orange);
+  transition-property: background-color, border;
+  transition-duration: var(--anim-time);
+  transition-timing-function: var(--anim-timing-function);
+}
+
+.btn:hover {
+  background-color: var(--color-light-orange);
+}
+
+.btn:active {
+  background-color: var(--color-dark-orange);
+}
+
+.body-noScroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.off {
+  display: none;
+}
+
+/* Section Menu */
+
+.section-menu__container {
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.section-menu__menu {
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  border-radius: var(--border-radius);
+  background: var(--color-F);
+}
+
+.section-menu__list {
+  margin-bottom: 50px;
+}
+
+.section-menu__item {
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.section-menu__input {
+  margin-right: 25px;
+}
+
+.section-menu__label {
+  font-weight: 600;
+}
+
+/* Section Game */
+
+.section-game__container {
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 50px;
+  margin-bottom: 0;
+}
+
+.section-game__time {
+  margin-bottom: 25px;
+}
+
+.section-game__cards-left {
+  margin-bottom: 50px;
+}
+
+.section-game__card-field {
+  flex-wrap: wrap;
+}
+
+.section-game__card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.section-game__card_inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+  background: var(--color-F);
+  border-radius: var(--border-radius);
+  font-size: 45px;
+  font-weight: 700;
+  color: var(--color-orange);
+}
+
+.section-game__card_inner_back {
+  position: absolute;
+  z-index: 9999;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  background: var(--color-light-orange);
+  border-radius: var(--border-radius);
+}
+
+.section-game__card_inner_back::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    248.67deg,
+    rgba(255, 255, 255, 0) 30.84%,
+    rgba(255, 255, 255, 0.29) 46.06%,
+    rgba(255, 255, 255, 0) 64.04%
+  );
+}
